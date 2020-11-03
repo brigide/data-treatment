@@ -1,5 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -29,5 +30,10 @@ class LinearRegress:
 
         plt.plot(xl, yl, 'r--')
         plt.show()
+
+    def r2(self):
+        return r2_score(self.y_test, self.y_pred)
+
+
 
 

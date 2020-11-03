@@ -3,7 +3,7 @@ import pandas as pd
 
 class Data:
     def __init__(self):
-        self.data = pd.read_csv('brazil_covid19.csv', header=(0))
+        self.data = pd.read_csv('registro01.csv', header=(0))
         self.data = self.data.dropna().drop_duplicates()
 
         self.ylabel = self.data.columns[-1]
